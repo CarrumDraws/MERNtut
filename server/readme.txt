@@ -1,5 +1,3 @@
-https://www.youtube.com/watch?v=K8YELRmUb5o
-
 "npm i nodemon"
 "npm i express body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken mongoose"
 

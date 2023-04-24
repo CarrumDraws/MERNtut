@@ -1,10 +1,30 @@
-npm i react-redux reduxjs/toolkit redux-persist react-dropzone dotenv formik yup react-router-dom@6 @mui/material @emotion/react @emotion/styled @mui/icons-material
+"npm i react-redux @reduxjs/toolkit redux-persist react-dropzone dotenv formik yup react-router-dom@6 @mui/material @emotion/react @emotion/styled @mui/icons-material"
 
 react-redux: State management
-reduxjs/toolkit: Redux Wrapper that makes redux easier. Reccomended
+@reduxjs/toolkit: Redux Wrapper that makes redux easier. Reccomended
 redux-persist: Can store state into local storage
 react-dropzone: Handles file upload
 dotenv
 formik yup: form handling and validation
 react-router-dom@6
 @mui/material @emotion/react @emotion/styled @mui/icons-material: Material UI stuff
+
+import google fonts
+
+Structure:
+Scenes Folder: Our pages
+    Widgets Folder: ?
+Components Folder: Reusable components
+State Folder: Redux/Toolkit Info. Best to keep data seperate.
+
+Fill up the State Folder with Redux state.
+In main index.js file, use configureStore and <Provider > as a wrapper to pass state down to children. Incorporate redux-persist as well.
+
+Note: Using .jsx means the file has React Components in them
+
+Optional: make jsconfig.json, set config to simplify import routes.
+
+Add a theme.js file to centeralize colors
+
+QUESTIONS : 
+- What are Styled Components?
