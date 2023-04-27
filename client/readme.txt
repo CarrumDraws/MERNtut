@@ -26,5 +26,27 @@ Optional: make jsconfig.json, set config to simplify import routes.
 
 Add a theme.js file to centeralize colors
 
+Make Navbar Page
+
+Make Login Page
+
+
+
 QUESTIONS : 
-- What are Styled Components?
+- What is FormData()?
+- What is a <Dropzone> object?
+    - What is getRootProps 
+- Where are the values of the form being stored?
+
+
+THINGS I LEARNED :
+MUI
+    - Styled Components : MUI's method of DRYing up repetitive 
+    - Themes : MUI's method of centralizing global values
+    - useMediaQuery : MUI's method to aid in Website Dynamic Scaling. Use to resize and change layout dynamically.
+yup
+    - A library for validating form input. the idea is to create a schema for a "form object" and match the user input with the schema.
+Formik
+    - A library that ties your form together. It passes you handleFormSubmit function to the form itself, validates with yup schemas, sets initial values. 
+Dropzone
+    - 

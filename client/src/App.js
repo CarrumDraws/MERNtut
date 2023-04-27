@@ -10,7 +10,8 @@ import { themeSettings } from "theme";
 function App() {
   // Read "mode" state from redux
   const mode = useSelector((state) => state.mode);
-  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]); // ?
+  // Creates a MUI theme with our theme file, passing in "mode" state
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   return (
     <div className="app">
       <BrowserRouter>
