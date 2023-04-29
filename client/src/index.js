@@ -5,6 +5,7 @@ import App from "./App";
 import authReducer from "./state";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
+
 // redux-persist saves state to local storage
 import {
   persistStore,

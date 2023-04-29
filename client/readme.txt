@@ -34,12 +34,12 @@ Make Login Page
 
 QUESTIONS : 
 - What is FormData()?
-- What is a <Dropzone> object?
-    - What is getRootProps 
 - Where are the values of the form being stored?
 
 
 THINGS I LEARNED :
+react-redux/redux-persist
+    - Instead of storing data directly in localStorage, you can use redux-persist. For sensitive data (like Bearer Token), you should make an API call.
 MUI
     - Styled Components : MUI's method of DRYing up repetitive 
     - Themes : MUI's method of centralizing global values

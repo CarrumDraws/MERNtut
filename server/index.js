@@ -30,13 +30,16 @@ app.use(cors()); // Fixes CORS policy
 
 app.use(helmet()); // Securing app by setting HTTP Headers
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+
 app.use(morgan("common")); // logs requests and info
+
 // Process request body from Post, Put, Patch calls
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 // Processes URLEncoded bodies too
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+
 // Sets directory of where images are stored
-app.use("./assets", express.static(path.join(__dirname, "public/assets")));
+app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 // FILE STORAGE CONFIG -----------------------
 // Multer simplifies the process of uploading files in Node

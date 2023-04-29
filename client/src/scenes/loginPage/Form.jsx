@@ -77,7 +77,7 @@ function Form() {
   };
 
   const register = async (values, onSubmitProps) => {
-    // Allows us to send form info with image
+    // this allows us to send form info with image
     const formData = new FormData();
     for (let value in values) {
       formData.append(value, values[value]);
@@ -98,6 +98,7 @@ function Form() {
     }
   };
 
+  // values = form values, onSubmitProps = object containing injected props and methods, like resetForm()
   const handleFormSubmit = async (values, onSubmitProps) => {
     if (isLogin) await login(values, onSubmitProps);
     if (isRegister) await register(values, onSubmitProps);

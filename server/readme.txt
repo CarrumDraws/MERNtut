@@ -11,7 +11,7 @@ mongoose: mongodb access
 
 "npm init y"
 
-Add "type": "module" to package.json. This way we can use import instead of require
+Add "type": "module" to package.json. This way we can use import instead of require.
 
 MongoDB Sign-In Data: dummyuser, dummyuser123
 Connect to MongoDB with your IPAddress > Select DB > Connect > Connect to your application (Drivers) > Copy connection string + add password > Add to .env as MONGO_URL.
