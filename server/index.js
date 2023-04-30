@@ -31,7 +31,8 @@ app.use(cors()); // Fixes CORS policy
 app.use(helmet()); // Securing app by setting HTTP Headers
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
-app.use(morgan("common")); // logs requests and info
+// app.use(morgan("common")); // logs requests and info
+app.use(morgan("dev"));
 
 // Process request body from Post, Put, Patch calls
 app.use(bodyParser.json({ limit: "30mb", extended: true }));

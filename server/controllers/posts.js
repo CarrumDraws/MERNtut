@@ -1,11 +1,13 @@
 import Post from "../models/Post.js";
+import User from "../models/User.js";
 
 // CREATE
 // Formats post,
 export const createPost = async (req, res) => {
   try {
+    console.log("server: createPost triggered");
     const { userId, description, picturePath } = req.body;
-    const user = await user.findById(userId);
+    const user = await User.findById(userId); // Can't access user before initialization?
     const newPost = new Post({
       userId,
       firstName: user.firstName,
@@ -21,6 +23,7 @@ export const createPost = async (req, res) => {
     const post = await Post.find(); // Returns all posts (????)
     res.status(201).json(post);
   } catch (err) {
+    console.log(err);
     res.status(409).json({ message: err.message });
   }
 };
