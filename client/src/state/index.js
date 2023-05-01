@@ -5,7 +5,7 @@ const initialState = {
   mode: "light",
   user: null,
   token: null,
-  posts: [],
+  posts: [], // Current posts to be shown. In practice, swaps between "all" posts and "user" posts.
 };
 
 export const authSlice = createSlice({
@@ -38,12 +38,14 @@ export const authSlice = createSlice({
     setPosts: (state, action) => {
       state.posts = action.payload.posts;
     },
-    // ???
+    // Replaces Post in Posts Array (Used for liking/unliking)
     setPost: (state, action) => {
+      // If post that is passed in's ID matches the ID of a post currently on screen, replace the post. Else, dont change the post.
       const updatedPosts = state.posts.map((post) => {
-        if (post._id === action.payload.post_id) return action.payload.post;
+        if (post._id === action.payload.post._id) return action.payload.post;
         return post;
       });
+      // Then, push the changes to state.
       state.posts = updatedPosts;
     },
   },

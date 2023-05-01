@@ -2,7 +2,7 @@ import Post from "../models/Post.js";
 import User from "../models/User.js";
 
 // CREATE
-// Formats post,
+// Formats post + returns all posts
 export const createPost = async (req, res) => {
   try {
     console.log("server: createPost triggered");
@@ -20,7 +20,7 @@ export const createPost = async (req, res) => {
       comments: [],
     });
     await newPost.save();
-    const post = await Post.find(); // Returns all posts (????)
+    const post = await Post.find();
     res.status(201).json(post);
   } catch (err) {
     console.log(err);
@@ -39,7 +39,7 @@ export const getFeedPosts = async (req, res) => {
   }
 };
 
-// Get A User's Posts
+// Get All Posts from specific User
 export const getUserPosts = async (req, res) => {
   try {
     const { userId } = req.params;

@@ -36,10 +36,10 @@ QUESTIONS :
 - What is FormData()?
 - Where are the values of the form being stored?
 
-
 THINGS I LEARNED :
 react-redux/redux-persist
     - Instead of storing data directly in localStorage, you can use redux-persist. For sensitive data (like Bearer Token), you should make an API call.
+    - Seems that changes to REDUX state rerenders all components. We can use this to make state changes like liking posts work without having to refresh the page.
 MUI
     - Styled Components : MUI's method of DRYing up repetitive 
     - Themes : MUI's method of centralizing global values

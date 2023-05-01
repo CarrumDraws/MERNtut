@@ -52,25 +52,18 @@ export const addRemoveFriend = async (req, res) => {
     } else {
       // Add Friend
       user.friends.push(friendId);
-      user.friends.push(id);
+      friend.friends.push(id);
     }
     await user.save(); // save is a MongoDB function
     await friend.save();
 
-    // Format Friends list...
+    // Format Your Friends list...
     const friends = await Promise.all(
       user.friends.map((id) => User.findById(id))
     );
     const formattedFriends = friends.map(
       ({ _id, firstName, lastName, occupation, location, picturePath }) => {
-        return {
-          _id,
-          firstName,
-          lastName,
-          occupation,
-          location,
-          picturePath,
-        };
+        return { _id, firstName, lastName, occupation, location, picturePath };
       }
     );
     res.status(200).json(formattedFriends); // ...and send it back

@@ -8,7 +8,7 @@ export const register = async (req, res) => {
     const {
       firstName,
       lastName,
-      friends, // Why is friends part of the register section...?
+      friends,
       email,
       password,
       picturePath,
@@ -38,7 +38,7 @@ export const register = async (req, res) => {
   }
 };
 
-// LOGGING IN (Authentication): Validates password + returns JWT
+// LOGGING IN (Authentication): Validates password + returns JWT & User
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
