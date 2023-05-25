@@ -30,7 +30,8 @@ Make Navbar Page
 
 Make Login Page
 
-
+DEPLOYMENT -----
+npm i @fvilers/disable-react-devtools
 
 QUESTIONS : 
 - What is FormData()?
