@@ -1,13 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+let dev = "http://localhost:3001";
+let prod = "https://carrums-merntut-server.onrender.com";
+
 // STORE: The state that is stored in our global state- accessible throughout whole app.
 const initialState = {
   mode: "light",
   user: null,
   token: null,
   posts: [], // Current posts to be shown. In practice, swaps between "all" posts and "user" posts.
+  url: process.env.NODE_ENV === "development" ? dev : prod,
 };
-
+console.log(process.env.NODE_ENV);
 export const authSlice = createSlice({
   name: "auth",
   initialState: initialState,

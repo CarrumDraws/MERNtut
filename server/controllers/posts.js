@@ -7,7 +7,7 @@ export const createPost = async (req, res) => {
   try {
     console.log("server: createPost triggered");
     const { userId, description, picturePath } = req.body;
-    const user = await User.findById(userId); // Can't access user before initialization?
+    const user = await User.findById(userId);
     const newPost = new Post({
       userId,
       firstName: user.firstName,

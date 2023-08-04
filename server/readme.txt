@@ -3,7 +3,7 @@
 
 body-parser: Process request body from Post, Put, Patch calls
 dotenv: Reading .env files
-gridsf-stream: file upload
+gridfs-stream: file upload
 multer multer-gridfs-storage : Simplifies the process of uploading files in Node
 helmet: Helps in securing your app by setting various HTTP Headers
 morgan: Logs requests and info

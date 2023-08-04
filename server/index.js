@@ -66,9 +66,17 @@ app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
 // MONGOOSE CONFIG ---------------------------
+process.env.NODE_ENV.trim() === "development"
+  ? console.log("Development")
+  : console.log("Production");
+
 const PORT = process.env.PORT || 6001;
+const mongoURL =
+  process.env.NODE_ENV.trim() == "development"
+    ? process.env.MONGO_URL_DEV
+    : process.env.MONGO_URL_PROD;
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
